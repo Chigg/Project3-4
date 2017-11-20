@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> Upload Content </h1>
+<form id = 'uploadcontentform' action = "" method = "post">
+<table border = "0">
+	<tr>
+	<td><label>Please enter the name of the quiz</label></td><td><input name = 'name' type = "text" size = '50'/></td>
+	</tr>
+
+	<tr>
+	<td><label></label></td><td><label>Questions</label></td><td><label>Answer Choices</label></td><td><label>Correct Answer</label></td>
+	</tr>
+
+	<tr>
+	<td><label>Question 1</label></td><td><input name = 'question_1' type = 'text' size = '50'/></td><td><input name = 'answer_1_1' type = 'text' size = '20'/></td><td><input type="text" name="correct_1" size = '20'></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_1_2' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_1_3' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td><label>Question 2</label></td><td><input name = 'question_2' type = 'text' size = '50'/></td><td><input name = 'answer_2_1' type = 'text' size = '20'/></td><td><input type="text" name="correct_2" size = '20'></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_2_2' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_2_3' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td><label>Question 3</label></td><td><input name = 'question_3' type = 'text' size = '50'/></td><td><input name = 'answer_3_1' type = 'text' size = '20'/></td><td><input type="text" name="correct_3" size = '20'></td>	
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_3_2' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_3_3' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td><label>Question 4</label></td><td><input name = 'question_4' type = 'text' size = '50'/></td><td><input name = 'answer_4_1' type = 'text' size = '20'/></td><td><input type="text" name="correct_4" size = '20'></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_4_2' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_4_3' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td><label>Question 5</label></td><td><input name = 'question_5' type = 'text' size = '50'/></td><td><input name = 'answer_5_1' type = 'text' size = '20'/></td><td><input type="text" name="correct_5" size = '20'></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_5_2' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_5_3' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td><label>Question 6</label></td><td><input name = 'question_6' type = 'text' size = '50'/></td><td><input name = 'answer_6_1' type = 'text' size = '20'/></td><td><input type="text" name="correct_6" size = '20'></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_6_2' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td></td><td></td><td><input name = 'answer_6_3' type = 'text' size = '20'/></td>
+	</tr>
+
+	<tr>
+	<td><input type = 'button' name = 'uploadbtn' value = "Upload"/></td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>
+
+<script type = "text/javascript">
+	document.getElementById('uploadcontentform').uploadbtn.onclick = upload;
+	function upload()
+	{	
+		var text = "";
+		var elt= document.getElementById('uploadcontentform');
+		var name = elt.name.value;
+		var question1 = elt.question_1.value;
+		text += question1 + '\n';
+		var answer11= elt.answer_1_1.value;
+		var answer12 = elt.answer_1_2.value;
+		var answer13 = elt.answer_1_3.value;
+		var correct1 = elt.correct_1.value;
+		text += answer11 +'\n' + answer12 + '\n' + answer13 + '\n' + correct1+'\n'
+
+		var question2 = elt.question_2.value;
+		text += question2 + '\n';
+		var answer21= elt.answer_2_1.value;
+		var answer22 = elt.answer_2_2.value;
+		var answer23 = elt.answer_2_3.value;
+		var correct2 = elt.correct_2.value;
+		text += answer21 +'\n' + answer22 + '\n' + answer23 + '\n' + correct2+'\n'
+
+		var question3 = elt.question_3.value;
+		text += question3 + '\n';
+		var answer31= elt.answer_3_1.value;
+		var answer32 = elt.answer_3_2.value;
+		var answer33 = elt.answer_3_3.value;
+		var correct3 = elt.correct_3.value;
+		text += answer31 +'\n' + answer32 + '\n' + answer33 + '\n' + correct3+'\n'
+
+		var question4 = elt.question_4.value;
+		text += question4 + '\n';
+		var answer41= elt.answer_4_1.value;
+		var answer42 = elt.answer_4_2.value;
+		var answer43 = elt.answer_4_3.value;
+		var correct4 = elt.correct_4.value;
+		text += answer41 +'\n' + answer42 + '\n' + answer43 + '\n' + correct4+'\n'
+
+		var question5 = elt.question_5.value;
+		text += question5 + '\n';
+		var answer51= elt.answer_5_1.value;
+		var answer52 = elt.answer_5_2.value;
+		var answer53 = elt.answer_5_3.value;
+		var correct5 = elt.correct_5.value;
+		text += answer51 +'\n' + answer52 + '\n' + answer53 + '\n' + correct5+'\n'
+
+		var question6 = elt.question_6.value;
+		text += question6 + '\n';
+		var answer61= elt.answer_6_1.value;
+		var answer62 = elt.answer_6_2.value;
+		var answer63 = elt.answer_6_3.value;
+		var correct6 = elt.correct_6.value;	
+		text += answer61 +'\n' + answer62 + '\n' + answer63 + '\n' + correct6+'\n'	
+		window.alert(text);
+
+		// var name = "myfile.txt";
+		// var text = "hello bopi";
+
+
+		// var file = new Blob(['Hello bopi'], {type: 'text/plain'});
+		// if (window.navigator.msSaveOrOpenBlob) // IE10+
+  //       window.navigator.msSaveOrOpenBlob(file, name);
+  //  		else{
+  //  			var a = document.createElement("a"), url = URL.createObjectURL(file);
+  //  			a.href = url;
+  //  			a.download = name;
+  //  			document.body.appendChild(a);
+  //  			a.click();
+  //  			setTimeout(function(){
+  //  				document.body.removeChild(a);
+  //  				window.URL.revokeObjectURL(url);
+  //  			}, 0);
+
+  //  		}
+	}
